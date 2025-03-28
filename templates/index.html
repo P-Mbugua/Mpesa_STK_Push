@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Soko Health Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <style>
+        .shadow-lg-custom {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-green-600 text-white py-5 text-center text-2xl font-bold sticky-header shadow-md">
+        Smart Soko Health Products
+    </header>
+
+    <div class="container mx-auto px-6 py-12">
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+            <!-- Product Cards -->
+            <div class="max-w-sm bg-white rounded-xl shadow-lg-custom p-6 transform transition duration-300 hover:scale-105">
+                <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/04/8205902/1.jpg?7561" alt="Organic Honey" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-semibold mb-2">Organic Honey</h2>
+                <p class="text-lg text-gray-800 mb-2">Ksh 2000 <span class="text-red-500 line-through">Ksh 2500</span> <span class="text-green-500">20% Off</span></p>
+                <p class="text-gray-700">Stock: <span class="font-bold">15</span></p>
+                <ul class="list-disc list-inside my-4 text-gray-700 space-y-1">
+                    <li><i class="fas fa-check-circle text-green-500"></i> Pure & Natural</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Rich in Nutrients</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Boosts Immunity</li>
+                </ul>
+                <button onclick="selectProduct(2000)" class="bg-green-600 text-white font-bold py-3 px-6 rounded-lg w-full hover:bg-green-700 transition">Buy Now</button>
+            </div>
+            
+            <div class="max-w-sm bg-white rounded-xl shadow-lg-custom p-6 transform transition duration-300 hover:scale-105">
+                <img src="course.jpg" alt="Online Course" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-semibold mb-2">Online Course</h2>
+                <p class="text-lg text-gray-800 mb-2">Ksh 4000 <span class="text-red-500 line-through">Ksh 5000</span> <span class="text-green-500">20% Off</span></p>
+                <p class="text-gray-700">Stock: <span class="font-bold">Unlimited</span></p>
+                <ul class="list-disc list-inside my-4 text-gray-700 space-y-1">
+                    <li><i class="fas fa-check-circle text-green-500"></i> Expert Instructors</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Lifetime Access</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Certificate Provided</li>
+                </ul>
+                <button onclick="selectProduct(4000)" class="bg-yellow-500 text-white font-bold py-3 px-6 rounded-lg w-full hover:bg-yellow-600 transition">Buy Now</button>
+            </div>
+            
+            <div class="max-w-sm bg-white rounded-xl shadow-lg-custom p-6 transform transition duration-300 hover:scale-105">
+                <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/0558232/1.jpg?8059" alt="Herbal Tea" class="w-full h-48 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-semibold mb-2">Herbal Tea</h2>
+                <p class="text-lg text-gray-800 mb-2">Ksh 6000</p>
+                <p class="text-gray-700">Stock: <span class="font-bold">8</span></p>
+                <ul class="list-disc list-inside my-4 text-gray-700 space-y-1">
+                    <li><i class="fas fa-check-circle text-green-500"></i> 100% Organic</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Improves Digestion</li>
+                    <li><i class="fas fa-check-circle text-green-500"></i> Rich in Antioxidants</li>
+                </ul>
+                <button onclick="selectProduct(6000)" class="bg-gray-300 text-gray-900 font-bold py-3 px-6 rounded-lg w-full hover:bg-gray-400 transition">Buy Now</button>
+            </div>
+        </div>
+        
+        <div id="phone-input" class="hidden text-center mt-8">
+            <input id="phone" type="text" placeholder="Enter your phone number" class="p-3 border border-gray-300 rounded-lg w-full max-w-md" />
+            <button onclick="subscribe()" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg mt-4 hover:bg-blue-700 transition">Proceed to Payment</button>
+        </div>
+        <div id="message" class="text-center mt-4"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-12 text-sm">
+        &copy; 2025 Smart Soko Health Products | Developed by <a href="https://mbuguapeter.netlify.app" class="text-green-400 hover:text-green-300">www.mbuguapeter.netlify.app</a>
+    </footer>
+
+    <script>
+        let selectedAmount = 0;
+        function selectProduct(amount) {
+            selectedAmount = amount;
+            document.getElementById('phone-input').classList.remove('hidden');
+        }
+
+        function subscribe() {
+            const phoneNumber = document.getElementById('phone').value.trim();
+            const messageDiv = document.getElementById('message');
+
+            if (!phoneNumber) {
+                messageDiv.innerHTML = '<p class="text-red-500">Please enter your phone number.</p>';
+                return;
+            }
+
+            fetch('/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ phone: phoneNumber, amount: selectedAmount }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                messageDiv.innerHTML = data.ResponseCode === '0' 
+                    ? '<p class="text-green-500">Payment request sent successfully. Please check your phone.</p>'
+                    : `<p class="text-red-500">Error: ${data.errorMessage}</p>`;
+            })
+            .catch(() => {
+                messageDiv.innerHTML = '<p class="text-red-500">An error occurred. Please try again.</p>';
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -37,3 +37,7 @@
 {"MerchantRequestID": "027c-413f-b715-561b76afc534714102", "CheckoutRequestID": "ws_CO_28032025112149446701571745", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
 {"MerchantRequestID": "027c-413f-b715-561b76afc534714115", "CheckoutRequestID": "ws_CO_28032025112106797701571745", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
 {"MerchantRequestID": "027c-413f-b715-561b76afc534714425", "CheckoutRequestID": "ws_CO_28032025113420959793057720", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}
+{"requestId": "027c-413f-b715-561b76afc534715091", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid PhoneNumber"}
+{"requestId": "b3ac-4f86-9167-882bec989b5163902", "errorCode": "400.002.02", "errorMessage": "Bad Request - Invalid PhoneNumber"}
+{"requestId": "b3ac-4f86-9167-882bec989b5163908", "errorCode": "500.003.02", "errorMessage": "System is busy. Please try again in few minutes."}
+{"MerchantRequestID": "027c-413f-b715-561b76afc534715111", "CheckoutRequestID": "ws_CO_28032025115503016793057720", "ResponseCode": "0", "ResponseDescription": "Success. Request accepted for processing", "CustomerMessage": "Success. Request accepted for processing"}

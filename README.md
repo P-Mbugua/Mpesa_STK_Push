@@ -1,13 +1,12 @@
-
 ---
 
-# M-Pesa STK Integration with Python and Flask
+# Smart Soko Products - M-Pesa STK Integration with Python and Flask
 
-This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment functionality using Python and Flask. The application allows users to subscribe to different Wi-Fi plans and processes payments through the M-Pesa API. It also handles and logs transaction statuses and provides error handling.
+This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment functionality using Python and Flask. The application allows users to subscribe to different product plans and processes payments through the M-Pesa API. It also handles and logs transaction statuses and provides error handling.
 
 ## Features
 
-- **Wi-Fi Subscription Plans**: Offers three different subscription plans with varying prices.
+- **Product Subscription Plans**: Offers multiple subscription plans with varying prices.
 - **M-Pesa STK Push Integration**: Initiates payment requests to M-Pesa and handles responses.
 - **Transaction Logging**: Logs transaction details for successful and failed transactions.
 - **Error Handling**: Displays errors and success messages to users.
@@ -23,8 +22,8 @@ This repository demonstrates how to integrate M-Pesa STK (Sim Tool Kit) payment 
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/Griffins-Mbae/Mpesa-stk-python-flask.git
-    cd Mpesa-stk-python-flask
+    git clone https://github.com/Griffins-Mbae/Smart-Soko-Products.git
+    cd Smart-Soko-Products
     ```
 
 2. Install the required Python packages:

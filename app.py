@@ -7,7 +7,7 @@ import json
 
 app = Flask(__name__)
 
-# M-Pesa credentials
+
 consumer_key = 'Y4rXhdoYgtv6YC7DTDYIUNz90Ktsw2wcyIDRzGI9AQGjfnKv'
 consumer_secret = '0DEVyCSHnxwuNSU84XvG23JIhTBlcSCs7fluj0p7A9MN6D41kWKgBV1VFsYEIRwK'
 shortcode = '174379'
